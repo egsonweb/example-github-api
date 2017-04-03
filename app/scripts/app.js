@@ -1,18 +1,11 @@
-var app = angular.module('app', ['todos', 'temperature', 'github', 'ngRoute']);
+(function() {
+  function bootstrap() {
+    angular.bootstrap(document, ['github'])
+  }
 
+  angular.module('github', ['github-browser']);
 
-app.config(function($routeProvider) {
-  $routeProvider
-  .when('/', {
-    template: '<todos></todos>'
-  })
-  .when('/temp', {
-    template: '<temp></temp>'
-  })
-  .when('/github', {
-    template: '<github></github>'
-  })
-  .otherwise({
-    redirectTo: '/todos'
-  });
-});
+  angular
+    .element(document)
+    .ready(bootstrap);
+})();

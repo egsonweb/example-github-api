@@ -1,2 +1,2 @@
-# example-todos-angular
+# example-github-api
 Simple Github Repository Browser
